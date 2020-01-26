@@ -26,11 +26,11 @@ useEffect(() => {
       axios(url2),
     ]);
     guardarLetra(letra.data.lyrics);
-    guardarInfo(informacion.data.artist[0]);
+    guardarInfo(informacion.data.artists[0]);
     //guardarLetra(resultado.data.lyrics);
   }
   consultarApiLetra();
-}, [busquedaLetra]);
+}, [busquedaLetra, info]);
 
   return (
     <Fragment>
