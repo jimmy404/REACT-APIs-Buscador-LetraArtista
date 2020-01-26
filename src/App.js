@@ -40,7 +40,9 @@ useEffect(() => {
         <div className="container mt-5">
           <div className="row">
             <div className="col-md-6">
-
+              <Info
+                info={info}
+              />
             </div>
             <div className="col-md-6">
               <Cancion
