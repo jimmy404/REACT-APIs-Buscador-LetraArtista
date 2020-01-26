@@ -7,6 +7,15 @@ const Formulario = () => {
         cancion: ''
     })
 
+    //Funcion para leer imputs
+
+    const actualizarState = e => {
+        guardarBusqueda({
+            ...busqueda,
+            [e.target.name] : e.target.value
+        })
+    }
+
     return (
         <div className="bg-info">
             <div className="container">
@@ -23,6 +32,7 @@ const Formulario = () => {
                                             className="form-control"
                                             name="artista"
                                             placeholder="Nombre Artista"
+                                            onChange={actualizarState}
                                             />
                                     </div>
                                 </div>
@@ -34,6 +44,7 @@ const Formulario = () => {
                                             className="form-control"
                                             name="cancion"
                                             placeholder="Nombre Cancion"
+                                            onChange={actualizarState}
                                             />
                                     </div>
                                 </div>
