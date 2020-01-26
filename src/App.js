@@ -9,6 +9,7 @@ function App() {
 //definimos state
 const [busquedaLetra, guardarBusquedaLetra] = useState({});
 const [letra, guardarLetra] = useState('');
+const [info, guardarInfo] = useState({});
 
 useEffect(() => {
   if(Object.keys(busquedaLetra).lenght === 0) return;
@@ -22,7 +23,8 @@ useEffect(() => {
       axios(url),
       axios(url2),
     ]);
-    
+    guardarLetra(letra.data.lyrics);
+    guardarInfo(informacion.data.artist[0]);
     //guardarLetra(resultado.data.lyrics);
   }
   consultarApiLetra();
