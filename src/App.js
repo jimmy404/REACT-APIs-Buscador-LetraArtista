@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import Formulario from './components/Formulario';
 import Cancion from './components/Cancion';
+import Info from './components/Info';
+
 
 import axios from 'axios';
 
